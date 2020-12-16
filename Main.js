@@ -51,7 +51,7 @@ toggleID.addEventListener('click', showMenu);
 const sr =  ScrollReveal({
     origin: 'top',
     distance: '80px',
-    duration: 1250,
+    duration: 2000,
     reset: true 
 })
 
