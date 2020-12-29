@@ -539,6 +539,7 @@ textarea {
     }
     .home-img {
         background-attachment: fixed;
+        bottom: 1%;
     }
 }
 /*  */
