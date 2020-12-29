@@ -73,3 +73,9 @@ sr.reveal('.skills-img', { delay: 400});
 sr.reveal('.work-img', { interval: 200});
 sr.reveal('.contact-input', { interval: 200});
 
+sr.reveal('.footer-title', { origin: 'left'});
+ sr.reveal('#facebook-icon', {origin: 'left', duration: 2100, delay: 500})
+ sr.reveal('#whatsapp-icon',{origin: 'left', duration: 2200, delay:1500})
+ sr.reveal('#linkedin-icon', {origin: 'left', duration: 2300, distance: '90px', delay:2000})
+ sr.reveal('#telegram-icon', {origin: 'left', duration: 2400, distance: '100px', delay:2500})
+
