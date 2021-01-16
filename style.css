@@ -252,6 +252,9 @@ header {
     background-attachment: fixed;
     background-size: cover;
 }
+#green-whatsapp:hover {
+            color: rgb(89, 207, 74);
+}
 /* Media query for smaller devices below 300px width */
 @media screen and (max-width: 300px)  {
     .home-social-icon {
@@ -297,6 +300,13 @@ header {
     width: 200px;
     border-radius: .5rem;
 }
+.about-text , .skills-text{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #111;
+    font-weight: 400;
+    text-align: justify;
+    
+}
 /* Skills */
 .skills {
     row-gap:2rem;
@@ -307,6 +317,7 @@ header {
  }
  .skills-text {
      margin-bottom: var(--mb-4);
+     
  }
 
 
@@ -327,15 +338,17 @@ header {
      margin-right:var(--mb-2);
 
  }
-#html-icon.skills-icon {
+ /* Tech skill icons */
+#html-icon.skills-icon , #git-icon {
     color: orangered;
 }
-#css-icon.skills-icon{
+#css-icon.skills-icon,#react-icon{
     color: var(--first-color);
 }
 #js-icon.skills-icon {
     color: rgba(226, 226, 13, 0.767);
 }
+
 .skills-names {
     display: flex;
     align-items: center;
@@ -523,6 +536,7 @@ textarea {
      column-gap: 2rem;
  }
 
+
  /* Contact form */
  .contact-form {
      width: 360px;
@@ -537,6 +551,8 @@ textarea {
         margin-left: auto;
         margin-right: auto;
     }
+ 
+    
     .home-img {
         background-attachment: fixed;
         bottom: 1%;
