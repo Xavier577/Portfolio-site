@@ -39,12 +39,12 @@ const addActive =(e)=> {
         menuToggle();
     }
 }
+// Event listeners
 navMenuId.addEventListener('click', addActive)
 toggleID.addEventListener('click', showMenu);
 
 
-
-
+// Animation effect
 const sr =  ScrollReveal({
     origin: 'top',
     distance: '80px',
