@@ -2,12 +2,13 @@
 var bLazy = new Blazy({
     // Options
 });
-
+// Selectors
 const toggleID = document.querySelector('#nav-toggle');
 const navMenuId = document.querySelector('#nav-menu');
  const navLink = document.querySelectorAll('.nav-link');
-function showMenu() {
-    navMenuId.classList.toggle('show')
+ //Functions
+  // below is the logic that makes the nav-menu(hamburger) icon change into the exit icon when toggled i assigned it to a variable so i could use it later
+ const menuToggle = () => {
     if (navMenuId.classList.contains('show')) {
         toggleID.innerHTML = '&times;'
         toggleID.style = 'font-size: 2.8rem; font-weight: 100;'
@@ -16,8 +17,13 @@ function showMenu() {
         toggleID.innerHTML = '&#9776;'
         toggleID.style = 'font-size: 1.5rem;  ' 
     }
+    
 }
-function addActive(e) {
+const showMenu =()=> {
+    navMenuId.classList.toggle('show')
+   menuToggle();
+}
+const addActive =(e)=> {
     let element = e.target;
     navLink.forEach(link => {
         link.classList.remove('active');
@@ -29,17 +35,8 @@ function addActive(e) {
 
         //REMOVE MOBILE MENU
         navMenuId.classList.remove('show');
-
-        //showMenu();
-
-       if (navMenuId.classList.contains('show')) {
-            toggleID.innerHTML = '&times;'
-            toggleID.style = 'font-size: 2.8rem; font-weight: 100;'
-        }
-        else {
-            toggleID.innerHTML = '&#9776;'
-            toggleID.style = 'font-size: 1.5rem;  ' 
-        } 
+         
+        menuToggle();
     }
 }
 navMenuId.addEventListener('click', addActive)
