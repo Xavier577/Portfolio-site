@@ -333,6 +333,9 @@ header {
      box-shadow: 0 3px 15px rgba(16,36,49,.15);
 
  }
+ .skills-data:hover {
+    box-shadow: 0 30px 50px rgba(0,0,0,0.15);
+ }
  .skills-icon {
      font-size: 2rem;
      margin-right:var(--mb-2);

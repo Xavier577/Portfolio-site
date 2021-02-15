@@ -1,4 +1,3 @@
-# project1
-Porfolio
+# Project
 
-still under construction, feel free to commment and give suggestions
+This is my personal portfolio that i have been working on for some time, Please do check it out at https://josephtsegen.netlify.app
