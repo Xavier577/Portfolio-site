@@ -57,6 +57,11 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
+}
+.scroll {
+  overflow: scroll !important;
+  scroll-behavior: smooth;
 }
 /*
 .sr { 

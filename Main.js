@@ -1,4 +1,5 @@
 // Selectors
+const html = document.querySelector("html");
 const toggleID = document.querySelector("#nav-toggle");
 const navMenuId = document.querySelector("#nav-menu");
 const navLink = document.querySelectorAll(".nav-link");
@@ -42,6 +43,7 @@ toggleID.addEventListener("click", showMenu);
 window.onload = () => {
   setTimeout(() => {
     loader.classList.add("remove-loader");
+    html.classList.add("scroll");
     const sr = ScrollReveal({
       origin: "top",
       distance: "80px",
