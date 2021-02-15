@@ -60,7 +60,7 @@ html {
   overflow: hidden;
 }
 .scroll {
-  overflow: scroll !important;
+  overflow-y: scroll !important;
   scroll-behavior: smooth;
 }
 /*
