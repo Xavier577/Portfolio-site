@@ -433,8 +433,14 @@ header {
 	outline: none;
 	margin-bottom: var(--mb-4);
 }
+.contact-input:focus {
+	border: 1.5px solid var(--first-color);
+}
 textarea {
-	resize: vertical;
+	resize: none;
+}
+textarea::placeholder {
+	font-family: var(--body-font);
 }
 
 .contact-button {
