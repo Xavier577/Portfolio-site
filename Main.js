@@ -85,7 +85,7 @@ window.onload = () => {
 			distance: '90px',
 			delay: 3000,
 		});
-		sr.reveal('#telegram-icon', {
+		sr.reveal('#twitter-icon', {
 			origin: 'left',
 			duration: 2500,
 			distance: '100px',
