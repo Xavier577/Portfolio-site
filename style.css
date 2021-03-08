@@ -105,16 +105,32 @@ img {
 	z-index: 9999;
 	background-color: #ffffff;
 }
+#loader-text {
+	font-family: 'Lobster', cursive;
+	font-size: var(--big-font-size);
+	color: var(--first-color);
+	transform: scale(1);
+	animation: loaderBlur ease 2s infinite;
+}
 .remove-loader {
 	animation: fadeOut 3s;
 	animation-fill-mode: forwards;
 }
 
 /* fadeout animation */
+@keyframes loaderBlur {
+	50% {
+		transform: scale(2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
 @keyframes fadeOut {
 	100% {
 		opacity: 0;
 		visibility: hidden;
+		display: none;
 	}
 }
 /* css classes */
