@@ -1,13 +1,11 @@
-/* * {
-    padding: 0;
-    margin: 0;
+* {
     box-sizing: border-box;
-
 } 
-*/
+
 /* imported fonts from www.fonts.google.com*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200&display=swap'); /* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* Lobster */
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap'); /* Nova */
 
 /* Css variables */
 :root {
@@ -79,6 +77,10 @@ h1,
 h2,
 p {
 	margin: 0;
+}
+#tee {
+	font-family: 'Nova Flat', cursive;
+	color: var(--first-color);
 }
 nav ul li {
 	margin: 0;
