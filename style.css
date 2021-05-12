@@ -74,7 +74,7 @@ h2,
 p {
 	margin: 0;
 }
-#tee {
+.tee {
         font-family: 'Nova Flat', cursive; 
 	color: var(--first-color);
 }
