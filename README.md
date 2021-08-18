@@ -9,12 +9,12 @@
 
 <div align="center">
     <a href="https://josephtsegen.netlify.app">
-        <img src="/sample.png" alt="Sample screenshot" width="400" title="Go to website">
+        <img src="/sample.png" alt="Sample screenshot" width="500" title="Go to website">
     </a>
 </div>
 
 
-## Site
+## Website
 
 <div align="center">
 
