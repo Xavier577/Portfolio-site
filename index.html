@@ -24,7 +24,7 @@
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./static/styles/style.css" />
 
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
     <script
@@ -32,7 +32,7 @@
       src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
     ></script>
 
-    <script src="script.js" defer></script>
+    <script type="module" src="./static/js/index.js" defer></script>
   </head>
 
   <body>
@@ -57,9 +57,6 @@
             </li>
             <li class="nav-item">
               <a href="#work" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
             </li>
           </ul>
         </div>
@@ -218,22 +215,25 @@
         <h2 class="section-title">My Projects</h2>
 
         <div class="work-container grid">
-          <div class="work-img">
+          <div class="work-info-screen">
+            <div class="work-info-container"></div>
+          </div>
+          <div class="work-img" id="project1">
             <img class="b-lazy" src=".\assets\images\work 1.jpg" alt="work" />
           </div>
-          <div class="work-img">
+          <div class="work-img" id="project2">
             <img class="b-lazy" src=".\assets\images\work 2.jpg" alt="work" />
           </div>
-          <div class="work-img">
+          <div class="work-img" id="project3">
             <img class="b-lazy" src=".\assets\images\work 3.jpg" alt="work" />
           </div>
-          <div class="work-img">
+          <div class="work-img" id="project4">
             <img class="b-lazy" src=".\assets\images\work 4.png" alt="work" />
           </div>
-          <div class="work-img">
+          <div class="work-img" id="project5">
             <img class="b-lazy" src=".\assets\images\work 5.jpg" alt="work" />
           </div>
-          <div class="work-img">
+          <div class="work-img" id="project6">
             <img class="b-lazy" src=".\assets\images\work 6.jpg" alt="work" />
           </div>
         </div>
