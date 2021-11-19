@@ -3,40 +3,51 @@ import MyProjects from "./myProjects.js";
 
 const project = {
   show(event) {
-    const { name, description, url } = MyProjects[event.currentTarget.id];
-    const container = document.createElement("div");
+    const { name, description, url, previewImgSrc } =
+      MyProjects[event.currentTarget.id];
     const projectNameCnt = document.createElement("span");
     const projectDescriptionCnt = document.createElement("span");
-    const projectLinkTag = document.createElement("a");
+    const projectLink = document.createElement("a");
     const btn = document.createElement("button");
+    const previewImgContainer = document.createElement("div");
+    const previewImg = new Image();
 
-    selector(".work-info-screen", "querySelector").style.display = "flex";
-
+    const infoScreen = selector(".work-info-screen", "querySelector");
     const infoCnt = selector(".work-info-container", "querySelector");
 
+    infoScreen.style.display = "flex";
+
+    previewImgContainer.append(previewImg);
     projectNameCnt.append(document.createTextNode(name));
     projectDescriptionCnt.append(document.createTextNode(description));
     btn.append(document.createTextNode("check it out"));
-    projectLinkTag.append(btn);
+    projectLink.append(btn);
 
-    projectLinkTag.href = url;
-    projectLinkTag.target = "_blank";
-    projectLinkTag.className = "work-info-link";
+    previewImg.src = previewImgSrc;
+    previewImg.alt = "project_preview_img";
+    projectLink.href = url;
+    projectLink.target = "_blank";
+    previewImg.className = "work-preview-img";
+    previewImgContainer.className = "work-preview-container";
+    projectLink.className = "work-info-link";
     projectNameCnt.className = "work-info-name";
     projectDescriptionCnt.className = "work-info-description";
 
     infoCnt.appendChild(projectNameCnt);
+    infoCnt.appendChild(previewImgContainer);
     infoCnt.appendChild(projectDescriptionCnt);
-    infoCnt.appendChild(projectLinkTag);
+    infoCnt.appendChild(projectLink);
   },
   hide(event) {
-    const isProjectImg = Array.from(
+    const isInfoContainer = Array.from(
       selector(".work-info-container", "querySelectorAll")
-    ).some((projectImg) => {
-      return projectImg.isEqualNode(event.target);
-    });
+    ).some(
+      (projectImg) =>
+        projectImg.isEqualNode(event.target) ||
+        projectImg.contains(event.target)
+    );
 
-    if (!isProjectImg) {
+    if (!isInfoContainer) {
       selector(".work-info-screen", "querySelector").style.display = "none";
       selector(".work-info-container", "querySelector").innerHTML = "";
     }
