@@ -24,7 +24,6 @@ const project = {
     projectLink.append(btn);
 
     previewImg.src = previewImgSrc;
-    previewImg.alt = "project_preview_img";
     projectLink.href = url;
     projectLink.target = "_blank";
     previewImg.className = "work-preview-img";
