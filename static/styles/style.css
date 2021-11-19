@@ -469,7 +469,6 @@ header {
 }
 
 .work-info-description {
-  width: 60%;
   text-align: center;
   padding: 8px;
   font-family: "Noto Sans", sans-serif;
@@ -668,6 +667,10 @@ textarea::placeholder {
   .home-img {
     background-attachment: fixed;
     bottom: 1%;
+  }
+
+  .work-info-description {
+    width: 60%;
   }
 }
 /*  */
