@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200&display=swap"); /* Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap"); /* Lobster*/
 @import url("https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap"); /* Nova */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap'); /* Noto sans */
 
 /* Css variables */
 :root {
@@ -103,10 +104,8 @@ img {
   z-index: 9999;
   background-color: #ffffff;
 }
-#loader-text {
-  font-family: "Lobster", monospace;
-  font-size: var(--big-font-size);
-  color: var(--first-color);
+
+#loader-icon {
   transform: scale(1);
   animation: loaderBlur ease 2s infinite;
 }
@@ -454,15 +453,35 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  gap: 5px;
+  overflow-y: auto;
   background-color: whitesmoke;
   width: 80%;
   height: 500px;
+  z-index: 999;
+  padding: var(--mb-2);
   border-radius: 0.5rem;
+}
+
+.work-info-name {
+  column-gap: 2 span;
+  margin-top: var(--mb-5);
+  padding-bottom: 10px;
+}
+
+.work-info-description {
+  width: 60%;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .work-preview-container {
   width: 50%;
-  height: 50%;
+  height: auto;
+}
+
+.check-work-btn {
+  margin-top: 10px;
 }
 
 /* Contact Form */
@@ -487,7 +506,8 @@ textarea::placeholder {
   font-family: var(--body-font);
 }
 
-.contact-button {
+.contact-button,
+.check-work-btn {
   display: block;
   border: none;
   outline: none;

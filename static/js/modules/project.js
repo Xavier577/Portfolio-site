@@ -5,8 +5,8 @@ const project = {
   show(event) {
     const { name, description, url, previewImgSrc } =
       MyProjects[event.currentTarget.id];
-    const projectNameCnt = document.createElement("span");
-    const projectDescriptionCnt = document.createElement("span");
+    const projectNameCnt = document.createElement("h1");
+    const projectDescriptionCnt = document.createElement("p");
     const projectLink = document.createElement("a");
     const btn = document.createElement("button");
     const previewImgContainer = document.createElement("div");
@@ -20,7 +20,7 @@ const project = {
     previewImgContainer.append(previewImg);
     projectNameCnt.append(document.createTextNode(name));
     projectDescriptionCnt.append(document.createTextNode(description));
-    btn.append(document.createTextNode("check it out"));
+    btn.append(document.createTextNode("Learn more"));
     projectLink.append(btn);
 
     previewImg.src = previewImgSrc;
@@ -30,12 +30,15 @@ const project = {
     previewImg.className = "work-preview-img";
     previewImgContainer.className = "work-preview-container";
     projectLink.className = "work-info-link";
+    btn.className = "check-work-btn button";
     projectNameCnt.className = "work-info-name";
     projectDescriptionCnt.className = "work-info-description";
+    previewImgContainer.style.boxShadow = " 0 30px 50px rgba(0, 0, 0, 0.15)";
+    selector("html", "querySelector").classList.remove("scroll");
 
     infoCnt.appendChild(projectNameCnt);
-    infoCnt.appendChild(previewImgContainer);
     infoCnt.appendChild(projectDescriptionCnt);
+    infoCnt.appendChild(previewImgContainer);
     infoCnt.appendChild(projectLink);
   },
   hide(event) {
@@ -50,6 +53,7 @@ const project = {
     if (!isInfoContainer) {
       selector(".work-info-screen", "querySelector").style.display = "none";
       selector(".work-info-container", "querySelector").innerHTML = "";
+      selector("html", "querySelector").classList.add("scroll");
     }
   },
 };
