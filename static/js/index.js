@@ -1,5 +1,6 @@
 "use strict";
 import menu from "./modules/menu.js";
+import setFooterYear from "./modules/footerYear.js";
 import selector from "./modules/selector.js";
 import project from "./modules/project.js";
 import pageAnimation from "./modules/pageAnimation.js";
@@ -17,10 +18,12 @@ selector("#nav-menu", "querySelector").addEventListener(
   menu().trackActive
 );
 
+
 window.onload = () => {
   setTimeout(() => {
     selector(".loader", "querySelector").classList.add("remove-loader");
     selector("html", "querySelector").classList.add("scroll");
+    setFooterYear();
     pageAnimation();
   }, 0);
 };
